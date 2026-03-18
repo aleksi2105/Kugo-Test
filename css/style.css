@@ -1,0 +1,68 @@
+@import url("normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap");
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+}
+body {
+  font-family: "Jost", sans-serif;
+}
+.container {
+  max-width: 64.75rem;
+  margin: auto;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-work {
+  display: flex;
+}
+.header-work-list {
+  display: flex;
+  gap: 1.875rem;
+}
+.header-work-item {
+  list-style: none;
+}
+.header-work-link {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #5d6c7b;
+  text-decoration: none;
+}
+.header-socials {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+}
+.header-socials-icon-item {
+  text-decoration: none;
+  margin-right: 0.5313rem;
+}
+.socials-logo {
+  width: 12px;
+  height: 12px;
+}
+.header-phone {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #282739;
+  text-decoration: none;
+}
+.header-line {
+  width: 100vw;
+  height: 1px;
+  background: #ecf3ff;
+}
