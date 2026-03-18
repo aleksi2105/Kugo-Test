@@ -22,6 +22,8 @@ body {
 }
 
 .header-top {
+  margin-top: 0.6875rem;
+  margin-bottom: 0.6875rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,6 +32,7 @@ body {
   display: flex;
 }
 .header-work-list {
+  padding-left: 0;
   display: flex;
   gap: 1.875rem;
 }
@@ -38,18 +41,18 @@ body {
 }
 .header-work-link {
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   color: #5d6c7b;
   text-decoration: none;
 }
 .header-socials {
-  margin-left: 30px;
+  margin-left: 1.875rem;
   display: flex;
   align-items: center;
 }
 .header-socials-icon-item {
   text-decoration: none;
-  margin-right: 0.5313rem;
+  margin-right: 0.3rem;
 }
 .socials-logo {
   width: 12px;
@@ -57,7 +60,7 @@ body {
 }
 .header-phone {
   font-weight: 500;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   color: #282739;
   text-decoration: none;
 }
@@ -65,4 +68,37 @@ body {
   width: 100vw;
   height: 1px;
   background: #ecf3ff;
+}
+.header-logo-svg {
+  max-width: 115px;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+}
+.button {
+  border: 1.5px solid #6f73ee;
+  border-radius: 5px;
+  background: #6f73ee;
+}
+.header-button {
+  padding: 15px;
+  padding-right: 18px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  width: 114px;
+  height: 40px;
+  gap: 13px;
+}
+.header-burger-line {
+  height: 1px !important;
+  min-height: 1px !important;
+  width: 13px;
+  background-color: #ffffff;
+  margin-bottom: 4px;
+}
+.header-burger-line:last-child {
+  width: 7px;
+  margin-left: 6px;
 }
