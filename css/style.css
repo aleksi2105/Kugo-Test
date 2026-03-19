@@ -17,13 +17,14 @@ body {
   font-family: "Jost", sans-serif;
 }
 .container {
-  max-width: 64.75rem;
+  max-width: 1121px;
   margin: auto;
 }
 
 .header-top {
   margin-top: 0.6875rem;
   margin-bottom: 0.6875rem;
+  margin-left: 9px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +42,7 @@ body {
 }
 .header-work-link {
   font-weight: 400;
-  font-size: 0.65rem;
+  font-size: 12px;
   color: #5d6c7b;
   text-decoration: none;
 }
@@ -60,7 +61,7 @@ body {
 }
 .header-phone {
   font-weight: 500;
-  font-size: 0.65rem;
+  font-size: 12px;
   color: #282739;
   text-decoration: none;
 }
@@ -73,6 +74,7 @@ body {
   max-width: 115px;
 }
 .header-content {
+  margin-left: 11px;
   display: flex;
   align-items: center;
 }
@@ -133,4 +135,31 @@ body {
 .button-search-svg {
   width: 16px;
   height: 16px;
+}
+.header-actions {
+  margin-left: 47px;
+  display: flex;
+  align-items: center;
+  gap: 1.5625rem;
+}
+.header-actions-icon {
+  height: 20px;
+  width: 20px;
+}
+.header-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  vertical-align: middle;
+}
+.header-actions a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.header-cart-text {
+  font-weight: 500;
+  font-size: 14px;
+  color: #282739;
 }
