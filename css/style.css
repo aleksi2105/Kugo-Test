@@ -20,6 +20,9 @@ body {
   max-width: 1121px;
   margin: auto;
 }
+.bold-text {
+  font-weight: 500;
+}
 
 .header-top {
   margin: 0;
@@ -182,6 +185,10 @@ body {
   margin-top: 2.625rem;
   border-radius: 10px;
 }
+.container-wide {
+  max-width: 86.25rem;
+  margin: auto;
+}
 .hero-promo {
   max-width: 38.75rem;
   margin-left: 8.5rem;
@@ -267,4 +274,53 @@ body {
   font-size: 1rem;
   text-align: center;
   color: #6f73ee;
+}
+.advantages-choice {
+  margin-top: 4.5rem;
+  display: flex;
+}
+.advantages-choice-wrapper {
+  margin-left: 8.5rem;
+}
+.advantages-choice-title {
+  font-weight: 600;
+  font-size: 2.1875rem;
+  line-height: 145%;
+  text-transform: uppercase;
+  color: #282739;
+}
+.advantages-list-title {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 119%;
+  color: #282739;
+}
+.advantages-list-item {
+}
+.check-advant {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+.advantages-item-text {
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: #282739;
+}
+.advantages-learn {
+  margin-top: 5.875rem;
+  display: flex;
+}
+.advantages-learn-wrapper {
+  margin-left: 5.9375rem;
+  margin-right: 9.375rem;
+}
+.advantages-list-item {
+  margin-top: 0.9375rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+.advantages-list-content {
+  padding: 0;
 }
