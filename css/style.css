@@ -324,3 +324,27 @@ body {
 .advantages-list-content {
   padding: 0;
 }
+.products-title {
+  font-weight: 600;
+  font-size: 2.1875rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #282739;
+}
+.product-card-title {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #282739;
+}
+.product-specs-list {
+  columns: 2 auto;
+}
+.product-specs-item {
+  list-style: none;
+}
+.product-specs-item-svg {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  margin-right: 10px;
+}
