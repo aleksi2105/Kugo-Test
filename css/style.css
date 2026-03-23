@@ -91,6 +91,7 @@ body {
   border: 1.5px solid #6f73ee;
   border-radius: 5px;
   background: #6f73ee;
+  cursor: pointer;
 }
 .header-button {
   margin-right: 20px;
@@ -102,6 +103,7 @@ body {
   width: 114px;
   height: 40px;
   gap: 13px;
+  cursor: pointer;
 }
 .header-burger-line {
   height: 1px !important;
@@ -137,6 +139,7 @@ body {
   width: 40px;
   height: 40px;
   background: #6f73ee;
+  cursor: pointer;
 }
 .button-search-svg {
   width: 16px;
@@ -274,6 +277,7 @@ body {
   font-size: 1rem;
   text-align: center;
   color: #6f73ee;
+  cursor: pointer;
 }
 .advantages-choice {
   margin-top: 4.5rem;
@@ -330,21 +334,89 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #282739;
+  max-width: 45.75rem;
+  margin: auto;
+  margin-top: 6.25rem;
+}
+.product-cards-wrapper {
+  margin-top: 3.125rem;
+  display: flex;
+  gap: 1.875rem;
+}
+.product-card {
+  max-width: 15.9375rem;
+  max-height: 30.75rem;
+  border: 1.5px solid #eaebed;
+  border-radius: 10px;
+}
+.product-card:hover {
+  border: 1.5px solid #6f73ee;
 }
 .product-card-title {
+  margin-top: 0;
   font-weight: 600;
   font-size: 1.125rem;
   color: #282739;
 }
+.product-card-img {
+  width: 100%;
+}
+.product-card-description {
+  padding: 1.25rem 1.5625rem 1.25rem 1.5rem;
+}
 .product-specs-list {
   columns: 2 auto;
+  padding: 0;
 }
 .product-specs-item {
   list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
 }
 .product-specs-item-svg {
   width: 18px;
   height: 18px;
   padding: 0;
-  margin-right: 10px;
+}
+.product-specs-item-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #5d6c7b;
+}
+.product-options {
+  display: flex;
+  margin-bottom: 1.1875rem;
+}
+.product-old-price {
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-decoration: line-through;
+  color: #5d6c7b;
+}
+.product-price {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #282739;
+}
+.product-actions {
+  margin-left: 1.625rem;
+}
+.product-cart-btn,
+.product-favorite-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  border-color: #eaebed;
+  border-width: 1.3px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.product-cart-svg,
+.product-favorite-svg {
+  width: 20px;
+  height: 20px;
 }
