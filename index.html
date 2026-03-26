@@ -566,15 +566,44 @@
             />
           </picture>
           <div class="container">
-            <h2 class="cta-form-title">Нет нужной модели, которую хотите протестировать?</h2>
+            <h2 class="cta-form-title">
+              Нет нужной модели, которую хотите протестировать?
+            </h2>
             <div class="cta-form-wrapper">
-              <form action="" method="POST" class="cta-form"> 
-                <h3 class="cta-input-title">Оставьте заявку, и менеджер подберет нужный самокат</h3>
+              <form action="" method="POST" class="cta-form">
+                <h3 class="cta-input-title">
+                  Оставьте заявку, и менеджер подберет нужный самокат
+                </h3>
                 <div class="input-group-wrapper">
-             
+                  <input
+                    id="user-phone"
+                    type="tel"
+                    class="cta-input"
+                    name="userphone"
+                    placeholder="+7 (_ _ _) _ _ - _ _ - _ _"
+                    maxlength="30"
+                    required
+                  />
+                  <label class="input-group-label" for="user-phone"></label>
+                  <button class="button cta-form-button" type="submit">
+                    Оставить заявку на тест-драйв
+                  </button>
+                </div>
+                <div class="notify">
+                  <label for="notify">
+                    <input
+                      class="notify-input"
+                      type="checkbox"
+                      id="notify"
+                      checked
+                    />
+                    Нажимая на кнопку, вы соглашаетесь на обработку персональных
+                    данных и политикой конфиденциальности</label
+                  >
+                </div>
+              </form>
             </div>
           </div>
-            
         </div>
       </section>
     </main>

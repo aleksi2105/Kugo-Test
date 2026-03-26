@@ -508,3 +508,38 @@ body {
   color: #282739;
   line-height: 140%;
 }
+.cta-input-title {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #282739;
+}
+.cta-input {
+  width: 16.4375rem;
+  height: 3.3125rem;
+  border: 1px solid #eaebed;
+  border-radius: 5px;
+  padding: 0.9375rem 1.5625rem;
+}
+.cta-input placeholder {
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-align: center;
+  color: #5d6c7b;
+}
+.cta-form-button {
+  border-radius: 5px;
+  padding: 0.9375rem 1.5rem;
+  width: 16.125rem;
+  height: 3.3125rem;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  color: #ffffff;
+}
+.notify-input {
+  accent-color: #ffffff;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+}
