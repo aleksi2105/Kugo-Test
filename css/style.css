@@ -599,3 +599,18 @@ body {
   text-decoration: underline;
   cursor: pointer;
 }
+.subscribe {
+  margin-top: 5.5625rem;
+  background-color: #6f73ee;
+}
+.subscribe-wrapper {
+  display: flex;
+  align-items: center;
+}
+.subscribe-title {
+  max-width: 27.8125rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
