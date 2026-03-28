@@ -589,17 +589,23 @@
                     Оставить заявку на тест-драйв
                   </button>
                 </div>
-                <div class="notify">
-                  <label for="notify">
+                <div class="notify-wrapper">
+                  <label for="notify" class="notify-label">
                     <input
                       class="notify-input"
                       type="checkbox"
                       id="notify"
                       checked
+                      required
                     />
-                    Нажимая на кнопку, вы соглашаетесь на обработку персональных
-                    данных и политикой конфиденциальности</label
-                  >
+                    <p class="notify-text">
+                      Нажимая на кнопку, вы соглашаетесь на обработку
+                      персональных данных и
+                      <a href="#" target="_blank" class="privacy-link"
+                        >политикой конфиденциальности</a
+                      >
+                    </p>
+                  </label>
                 </div>
               </form>
             </div>
