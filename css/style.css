@@ -132,6 +132,11 @@ body {
   border-radius: 5px 0 0 5px;
   padding-left: 20px;
 }
+.header-search-input::placeholder {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #5d6c7b;
+}
 .button-search {
   padding: 12px;
   border: 1.5px solid #6f73ee;
@@ -299,8 +304,7 @@ body {
   line-height: 119%;
   color: #282739;
 }
-.advantages-list-item {
-}
+
 .check-advant {
   width: 1.375rem;
   height: 1.375rem;
@@ -413,7 +417,7 @@ body {
   fill: #5d6c7b;
 }
 .product-card-description {
-  padding: 1.25rem 1.5625rem 1.25rem 1.5rem;
+  padding: 1.25rem 1.3rem 1.25rem 1.5rem;
 }
 .product-specs-list {
   columns: 2 auto;
@@ -524,7 +528,7 @@ body {
   border-radius: 5px;
   padding: 0.9375rem 1.5625rem;
 }
-.cta-input placeholder {
+.cta-input::placeholder {
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 0.15em;
@@ -601,9 +605,12 @@ body {
 }
 .subscribe {
   margin-top: 5.5625rem;
+  min-height: 5.9375rem;
   background-color: #6f73ee;
 }
 .subscribe-wrapper {
+  padding-top: 0.875rem;
+  max-width: 71.6875rem;
   display: flex;
   align-items: center;
 }
@@ -611,6 +618,32 @@ body {
   max-width: 27.8125rem;
   font-weight: 600;
   font-size: 1.125rem;
+  line-height: 122%;
   text-transform: uppercase;
   color: #ffffff;
+}
+.subscribe-input {
+  width: 25.625rem;
+  height: 3.3125rem;
+  margin-left: 5.9375rem;
+  border-radius: 5px;
+  border: 0;
+  padding: 0.9375rem 1.5625rem;
+  background: rgba(255, 255, 255, 0.2);
+}
+.subscribe-input::placeholder {
+  color: #ffffff;
+}
+.subscribe-button {
+  margin-left: 0.9375rem;
+  border: 0;
+  border-radius: 5px;
+  padding: 0.9375rem 1.5625rem;
+  width: 8.75rem;
+  height: 3.3125rem;
+  background: #ffffff;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  color: #6f73ee;
 }
