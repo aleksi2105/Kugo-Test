@@ -647,3 +647,58 @@ body {
   text-align: center;
   color: #6f73ee;
 }
+.footer-top-wrapper {
+  display: inline-flex;
+}
+.footer-line {
+  height: 1px;
+  background: #d9d9d9;
+}
+.footer-site-map {
+  display: flex;
+}
+.footer-map-title {
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: #282739;
+}
+.footer-map-list {
+  padding: 0;
+}
+.columns-2 {
+  columns: 7rem 2;
+}
+.footer-map-item {
+  list-style: none;
+}
+.footer-map-item-link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #5d6c7b;
+}
+.footer-phones-wrapper {
+  display: flex;
+}
+.footer-phones-title {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #282739;
+}
+.footer-phone-number {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #282739;
+  text-decoration: none;
+}
+.footer-worktime {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #5d6c7b;
+}
+.footer-call {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #6f73ee;
+  text-decoration: none;
+}
