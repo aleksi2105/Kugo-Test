@@ -649,27 +649,38 @@ body {
 }
 .footer-top-wrapper {
   display: inline-flex;
+  margin-top: 2.0625rem;
+  margin-left: -0.8125rem;
+  margin-bottom: 3.1rem;
 }
 .footer-line {
+  margin-left: -0.8125rem;
   height: 1px;
   background: #d9d9d9;
 }
 .footer-site-map {
   display: flex;
 }
+.footer-map-customers {
+  margin-left: 7.8125rem;
+}
 .footer-map-title {
+  margin-bottom: 0;
   font-weight: 500;
   font-size: 1.125rem;
   color: #282739;
 }
 .footer-map-list {
   padding: 0;
+  margin-top: 1.25rem;
 }
 .columns-2 {
   columns: 7rem 2;
+  column-gap: 2.75rem;
 }
 .footer-map-item {
   list-style: none;
+  margin-bottom: 0.71rem;
 }
 .footer-map-item-link {
   text-decoration: none;
@@ -677,10 +688,15 @@ body {
   font-size: 0.875rem;
   color: #5d6c7b;
 }
+.footer-contacts {
+  margin-left: 6rem;
+}
 .footer-phones-wrapper {
   display: flex;
+  gap: 2.5rem;
 }
 .footer-phones-title {
+  margin-bottom: 0.625rem;
   font-weight: 400;
   font-size: 0.75rem;
   color: #282739;
@@ -697,6 +713,7 @@ body {
   color: #5d6c7b;
 }
 .footer-call {
+  margin-left: 4.48rem;
   font-weight: 500;
   font-size: 0.75rem;
   color: #6f73ee;
