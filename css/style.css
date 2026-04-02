@@ -647,6 +647,9 @@ body {
   text-align: center;
   color: #6f73ee;
 }
+.footer {
+  background: #f4f7fb;
+}
 .footer-top-wrapper {
   display: inline-flex;
   margin-top: 2.0625rem;
@@ -717,5 +720,23 @@ body {
   font-weight: 500;
   font-size: 0.75rem;
   color: #6f73ee;
+  text-decoration: none;
+}
+.footer-center {
+  display: flex;
+  align-items: center;
+}
+.footer-logo-svg {
+  max-width: 7.1875rem;
+  max-height: 1.875rem;
+  margin-top: 2.1875rem;
+  margin-left: -0.8125rem;
+  margin-right: 3.6875rem;
+}
+.footer-apps-wrapper {
+  margin-top: 2.1875rem;
+}
+.footer-apps-link {
+  margin-left: 0.625rem;
   text-decoration: none;
 }
