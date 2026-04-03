@@ -725,27 +725,27 @@ body {
 .footer-center {
   display: flex;
   align-items: center;
-  margin-bottom: 2.1875rem;
+  margin-bottom: 1.8rem;
 }
 .footer-logo-svg {
   max-width: 7.1875rem;
   max-height: 1.875rem;
   margin-top: 2.1875rem;
   margin-left: -0.8125rem;
-  margin-right: 3.6875rem;
+  margin-right: 3.1875rem;
 }
 .footer-apps-wrapper {
   margin-top: 2.1875rem;
 }
 .footer-apps-link {
-  margin-left: 0.625rem;
+  margin-left: 0.4375rem;
   text-decoration: none;
 }
 .footer-media-wrapper {
   margin-top: 2rem;
+  margin-left: 15.125rem;
   display: flex;
   gap: 10px;
-  margin-left: auto;
 }
 .footer-media-card {
   display: inline-flex;
@@ -771,6 +771,10 @@ body {
 .footer-media-card-icon svg {
   width: 20px;
   height: 20px;
+}
+.footer-media-card-text {
+  margin-top: -5px;
+  margin-left: -4px;
 }
 .footer-media-card-title {
   text-decoration: none;
