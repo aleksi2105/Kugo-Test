@@ -522,14 +522,14 @@ body {
   font-size: 1rem;
   color: #282739;
 }
-.cta-input {
+.input {
   width: 16.4375rem;
   height: 3.3125rem;
   border: 1px solid #eaebed;
   border-radius: 5px;
   padding: 0.9375rem 1.5625rem;
 }
-.cta-input::placeholder {
+.input::placeholder {
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 0.15em;
@@ -540,11 +540,11 @@ body {
   margin-top: 1.3125rem;
   margin-left: 0.4375rem;
 }
-.cta-input:focus {
+.input:focus {
   border-color: #6f73ee;
   outline: none;
 }
-.cta-form-button {
+.form-button {
   margin-left: 0.9375rem;
   border-radius: 5px;
   padding: 0.9375rem 1.5rem;
@@ -834,4 +834,65 @@ body {
   width: 16px;
   height: 16px;
   filter: grayscale(100%);
+}
+.modal {
+  border-radius: 5px;
+  width: 49.375rem;
+  height: 36.875rem;
+  margin: auto;
+  position: relative;
+}
+.modal-dialog {
+  display: flex;
+  background-color: #ffffff;
+
+  padding: 2.5rem 3.5rem 2.3125rem 2.5rem;
+
+  /* transform: translateY(-10%);
+  opacity: 0; */
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+.modal-close {
+  display: block;
+  position: absolute;
+  top: 17px;
+  right: 50px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-description-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.modal-title {
+  max-width: 16.625rem;
+  font-weight: 600;
+  font-size: 1.5625rem;
+  text-transform: uppercase;
+  color: #282739;
+}
+.modal-title-text {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 125%;
+  color: #282739;
+}
+.modal-text {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #282739;
+}
+.modal-input-title {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #5d6c7b;
+}
+.modal-img {
+  max-width: 338px;
+  max-height: 31.0625rem;
 }

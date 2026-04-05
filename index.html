@@ -578,14 +578,14 @@
                   <input
                     id="user-phone"
                     type="tel"
-                    class="cta-input"
+                    class="input"
                     name="userphone"
                     placeholder="+7 (_ _ _) _ _ - _ _ - _ _"
                     maxlength="30"
                     required
                   />
                   <label class="input-group-label" for="user-phone"></label>
-                  <button class="button cta-form-button" type="submit">
+                  <button class="button form-button" type="submit">
                     Оставить заявку на тест-драйв
                   </button>
                 </div>
@@ -835,6 +835,72 @@
           </div>
         </div>
       </footer>
+      <div class="modal" id="feedback-modal">
+        <a
+          href="#"
+          class="modal-close"
+          data-toggle="modal"
+          data-target="#feedback-modal"
+          aria-label="Закрыть"
+        >
+          <svg class="close-icon" width="24" height="24">
+            <use href="./img/sprite.svg#close"></use>
+          </svg>
+        </a>
+        <div class="modal-dialog">
+          <div class="modal-description-wrapper">
+            <h2 class="modal-title">
+              Запишитесь на тест-драйв электросамоката
+            </h2>
+            <p class="modal-title-text">и подберите модель для себя</p>
+            <p class="modal-text">
+              Менеджер свяжется с вами в течение 5 минут, чтобы согласовать
+              время.
+            </p>
+            <form action="" class="modal-form">
+              <h5 class="modal-input-title">Как с вами удобнее связаться?</h5>
+              <input
+                type="tel"
+                class="input"
+                id="modal-user-phone"
+                placeholder="+7 (_ _ _) _ _ - _ _ - _ _"
+                maxlength="30"
+                required
+              />
+              <button class="button form-button" type="submit">
+                Оформить предзаказ
+              </button>
+              <div class="notify-wrapper">
+                <label for="notify" class="notify-label">
+                  <input
+                    class="notify-input-modal"
+                    type="checkbox"
+                    id="notify-modal"
+                    checked
+                    required
+                  />
+                  <p class="notify-text">
+                    Нажимая на кнопку, вы соглашаетесь на обработку персональных
+                    данных и
+                    <a href="#" target="_blank" class="privacy-link"
+                      >политикой конфиденциальности</a
+                    >
+                  </p>
+                </label>
+              </div>
+            </form>
+          </div>
+          <picture>
+            <source type="image/webp" srcset="./img/Girl-on-scooter.webp" />
+            <source type="image/jpeg" srcset="./img/Girl-on-scooter.png" />
+            <img
+              src="./img/Girl-on-scooter.png"
+              alt="Девушка на самокате"
+              class="modal-img"
+            />
+          </picture>
+        </div>
+      </div>
     </main>
 
     <script src="./js/main.js"></script>
