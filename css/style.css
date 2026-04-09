@@ -1080,4 +1080,12 @@ body {
     right: 2.25rem;
     max-height: 35rem;
   }
+  .cta-input {
+    max-width: 13.4rem;
+  }
+  .form-button {
+    max-width: 13.4rem;
+    font-size: 0.75rem;
+    border: 1px;
+  }
 }
