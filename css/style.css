@@ -1169,3 +1169,12 @@ body {
     margin-left: -1rem;
   }
 }
+@media (max-width: 700px) {
+  html {
+    font-size: 12px;
+  }
+  .advantages-learn-wrapper {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
