@@ -1063,16 +1063,6 @@ body {
   }
 }
 @media (max-width: 1024px) {
-  .advantages-choice-title,
-  .advantages-choice-title {
-    font-size: 1.5rem;
-  }
-  .product-card-button {
-    padding: 0.625rem 1.7rem;
-    width: 95%;
-  }
-}
-@media (max-width: 970px) {
   html {
     font-size: 14px;
   }
@@ -1087,5 +1077,95 @@ body {
     max-width: 13.4rem;
     font-size: 0.75rem;
     border: 1px;
+  }
+  .advantages-choice-img,
+  .advantages-learn-img {
+    max-width: 25rem;
+    margin: 15px;
+  }
+  .advantages-choice-title,
+  .advantages-choice-title {
+    font-size: 1.5rem;
+  }
+  .product-card-button {
+    padding: 0.625rem 1.7rem;
+    width: 95%;
+  }
+}
+@media (max-width: 870px) {
+  html {
+    font-size: 13px;
+  }
+  .container {
+    max-width: 51rem;
+  }
+
+  .header-burger-line {
+    margin-bottom: 2px;
+  }
+  .header-burger-line:last-child {
+    margin-left: 4px;
+  }
+  .header-search-input {
+    width: 15rem;
+  }
+  .button-search {
+    padding: 9px;
+  }
+  .hero-promo {
+    margin-left: 5.5rem;
+  }
+  .advantages-choice-wrapper {
+    margin-left: 5.5rem;
+  }
+  .product-specs-item-text {
+    font-size: 0.6rem;
+  }
+  .product-price {
+    font-size: 0.8rem;
+  }
+  .product-actions {
+    margin-left: 0.625rem;
+  }
+  .product-card-button {
+    padding: 0.5rem 2rem;
+  }
+  .cta-img {
+    display: none;
+  }
+  .cta-870 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 29rem;
+  }
+  .cta-form-title {
+    padding-top: 2.7rem;
+  }
+  .subscribe-input {
+    margin-left: 0.9rem;
+    width: 10rem;
+    padding: 0.9375rem 0.8rem;
+  }
+  .footer-top-wrapper {
+    margin-left: 0;
+  }
+  .footer-phones-wrapper {
+    display: block;
+  }
+  .footer-apps-img {
+    max-width: 6.25rem;
+  }
+  .footer-media-card {
+    max-width: 6.25rem;
+  }
+  .footer-media-card-icon {
+    width: 1rem;
+  }
+  .footer-media-card-text {
+    font-size: 0.6rem;
+  }
+  .footer-payments {
+    margin-left: -1rem;
   }
 }
