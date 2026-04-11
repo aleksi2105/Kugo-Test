@@ -350,14 +350,19 @@ body {
   margin-bottom: 6.25rem;
   margin-left: 4px;
   display: flex;
+  flex-wrap: wrap;
   gap: 1.875rem;
+  justify-content: center;
+  max-width: 1400px;
 }
 .product-card {
   position: relative;
+  flex: 0 0 calc(25% - 1.40625rem);
   max-width: 15.9375rem;
-  max-height: 30.75rem;
+  max-height: fit-content;
   border: 1.5px solid #eaebed;
   border-radius: 10px;
+  overflow: hidden;
 }
 .product-card:hover {
   border: 1.5px solid #6f73ee;
@@ -1118,17 +1123,26 @@ body {
   .advantages-choice-wrapper {
     margin-left: 5.5rem;
   }
-  .product-specs-item-text {
-    font-size: 0.6rem;
+  .product-cards-wrapper {
+    gap: 1.25rem; /* Меньший gap */
+    padding: 0 0.75rem;
   }
-  .product-price {
-    font-size: 0.8rem;
+
+  .product-card {
+    flex: 0 0 calc(50% - 0.625rem); /* 50% минус gap/2 */
+    max-width: none;
   }
+  .product-card-description {
+    padding: 1.25rem 2rem 1.25rem 2.7rem;
+  }
+
   .product-actions {
-    margin-left: 0.625rem;
+    margin-left: 5rem;
   }
   .product-card-button {
     padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: center;
   }
   .cta-img {
     display: none;
@@ -1172,6 +1186,12 @@ body {
 @media (max-width: 700px) {
   html {
     font-size: 12px;
+  }
+  .container {
+    max-width: 45rem;
+  }
+  .header-search-input {
+    width: 10rem;
   }
   .advantages-learn-wrapper {
     margin-left: 2rem;
