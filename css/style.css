@@ -1197,4 +1197,29 @@ body {
     margin-left: 2rem;
     margin-right: 2rem;
   }
+  .subscribe-input {
+    display: none;
+  }
+  .footer-call {
+    margin-left: 0.48rem;
+  }
+  .footer-apps-img {
+    max-width: 7rem;
+  }
+  .footer-media-wrapper {
+    margin-left: 10rem;
+  }
+  .footer-media-card {
+    max-width: 5rem;
+  }
+  .footer-media-card-icon {
+    width: 1rem;
+  }
+  .footer-media-card-text {
+    display: none;
+  }
+  .footer-payments {
+    columns: 2 auto;
+    margin-left: 7rem;
+  }
 }
