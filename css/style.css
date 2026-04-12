@@ -1124,12 +1124,12 @@ body {
     margin-left: 5.5rem;
   }
   .product-cards-wrapper {
-    gap: 1.25rem; /* Меньший gap */
+    gap: 1.25rem;
     padding: 0 0.75rem;
   }
 
   .product-card {
-    flex: 0 0 calc(50% - 0.625rem); /* 50% минус gap/2 */
+    flex: 0 0 calc(50% - 0.625rem);
     max-width: none;
   }
   .product-card-description {
@@ -1190,8 +1190,21 @@ body {
   .container {
     max-width: 45rem;
   }
+  .header-content {
+    margin-left: -1.5625rem;
+  }
+  .hero-promo {
+    margin-left: 4rem;
+  }
   .header-search-input {
     width: 10rem;
+  }
+  .button-search {
+    padding: 7px;
+  }
+  .advantages-choice-title,
+  .advantages-choice-title {
+    font-size: 1.2rem;
   }
   .advantages-learn-wrapper {
     margin-left: 2rem;
@@ -1221,5 +1234,73 @@ body {
   .footer-payments {
     columns: 2 auto;
     margin-left: 7rem;
+  }
+}
+@media (max-width: 580px) {
+  .header-cart-text {
+    display: none;
+  }
+  .header-content {
+    margin-left: 0;
+    justify-content: center;
+  }
+  .header-search-input {
+    display: none;
+  }
+  .advantages-choice {
+    margin-top: 2.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .advantages-learn {
+    margin-top: 2.5rem;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .advantages-learn-wrapper {
+    margin-left: 5.5rem;
+  }
+  .advantages-list {
+    margin-left: 5rem;
+  }
+  .products-title {
+    font-size: 1.25rem;
+  }
+  .product-card {
+    flex: 0 0 70%;
+    margin-bottom: 1.5rem;
+  }
+  .cta-580 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 29rem;
+  }
+  .subscribe-wrapper {
+    margin-left: 4rem;
+  }
+  .footer-top-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-center {
+    justify-content: center;
+  }
+  .footer-logo-svg {
+    margin-right: 0;
+  }
+  .footer-media-wrapper {
+    margin-left: 1rem;
+  }
+  .footer-phones-wrapper {
+    display: flex;
+  }
+  .footer-contacts {
+    margin-left: -7rem;
+    margin-bottom: -2rem;
+  }
+  .footer-call {
+    margin-left: 8.7rem;
   }
 }
