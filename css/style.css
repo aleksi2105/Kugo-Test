@@ -1247,6 +1247,12 @@ body {
   .header-search-input {
     display: none;
   }
+  .button-search {
+    border-radius: 5px;
+  }
+  .section-back-image {
+    min-height: 28.8125rem;
+  }
   .advantages-choice {
     margin-top: 2.5rem;
     flex-direction: column;
@@ -1270,6 +1276,15 @@ body {
     flex: 0 0 70%;
     margin-bottom: 1.5rem;
   }
+  .product-img-badge-hit,
+  .product-img-badge-new {
+    font-size: 1rem;
+    width: 4.5625rem;
+    height: 2.5625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .cta-580 {
     display: flex;
     justify-content: center;
@@ -1278,6 +1293,9 @@ body {
   }
   .subscribe-wrapper {
     margin-left: 4rem;
+  }
+  .subscribe-button {
+    margin-right: 1rem;
   }
   .footer-top-wrapper {
     display: flex;
@@ -1301,6 +1319,9 @@ body {
     margin-bottom: -2rem;
   }
   .footer-call {
-    margin-left: 8.7rem;
+    margin-left: 5.7rem;
+  }
+  .footer-bottom-documents {
+    margin-left: 3rem;
   }
 }
