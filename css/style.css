@@ -1321,6 +1321,9 @@ body {
   .footer-call {
     margin-left: 5.7rem;
   }
+  .footer-bottom {
+    display: block;
+  }
   .footer-bottom-documents {
     margin-left: 3rem;
   }
