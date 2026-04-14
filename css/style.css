@@ -178,6 +178,9 @@ body {
   font-size: 14px;
   color: #282739;
 }
+.header-phone-button {
+  display: none;
+}
 .no-webp .header-image {
   background-image: url("../img/header-back-scooter.png");
 }
@@ -1231,19 +1234,82 @@ body {
   }
 }
 @media (max-width: 580px) {
-  .header-cart-text {
+  .header-top {
     display: none;
   }
   .header-content {
-    margin-left: 0;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .header-logo {
+    order: 1;
+    flex: 0 0 auto;
+  }
+
+  .header-button {
+    order: 2;
+    flex: 0 0 auto;
+    margin-left: 12px;
+  }
+
+  .header-actions {
+    order: 3;
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+
+  .header-search {
+    order: 4;
+    width: 100%;
+    margin-top: 12px;
+  }
+  .header-content {
+    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .header-logo {
+    order: 1;
+    flex: 0 0 auto;
+  }
+
+  .header-button {
+    order: 2;
+    flex: 0 0 auto;
+    margin-left: 12px;
+  }
+
+  .header-actions {
+    order: 3;
+    flex: 0 0 auto;
+    margin-left: auto;
+    margin-right: 3.5rem;
+  }
+
+  .header-search {
+    order: 4;
+    flex: 0 0 100%;
+    width: 100%;
+    margin-top: 12px;
   }
   .header-search-input {
+    width: 100%;
+  }
+  .header-cart-text {
     display: none;
   }
-  .button-search {
+  .header-phone-button {
+    display: flex;
+    max-width: 2.5rem;
+    min-height: 2.5rem;
+    background: #6f73ee;
     border-radius: 5px;
   }
+
   .section-back-image {
     min-height: 28.8125rem;
   }
