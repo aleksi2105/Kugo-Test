@@ -1,144 +1,87 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const modal = document.querySelector('#feedback-modal');
+  const form = document.querySelector('.modal-form');
+  const phoneInput = document.querySelector('#modal-user-phone');
+  const submitButton = document.querySelector('.modal-form-button');
+  const closeButton = document.querySelector('.modal-close');
+
+  const openButtons = document.querySelectorAll(
+    '.hero-promo-button, .product-card-button, .order-call, .header-phone-button'
+  );
+
   const overlay = document.createElement('div');
   overlay.className = 'modal-overlay';
   document.body.appendChild(overlay);
 
-  const openButtons = document.querySelectorAll('.hero-promo-button, .product-card-button, .order-call');
-  const closeButton = document.querySelector('.modal-close');
-  const submitButton = document.querySelector('.modal-form-button'); // Кнопка "Оформить предзаказ"
-  const form = document.querySelector('.modal-form');
+  let lastActiveElement = null;
 
-  // Открытие
   openButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      openModal(e.currentTarget);
+      lastActiveElement = e.currentTarget;
+      openModal();
     });
   });
 
-  // Закрытие по X
   closeButton.addEventListener('click', (e) => {
     e.preventDefault();
     closeModal();
   });
 
-  // Закрытие по overlay
   overlay.addEventListener('click', closeModal);
 
-  // Закрытие по Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
       closeModal();
     }
   });
 
-  // ✅ Закрытие по кнопке "Оформить предзаказ" + очистка полей
   submitButton.addEventListener('click', (e) => {
     e.preventDefault();
-    if (validatePhone(phoneInput.value)) {
-      // Имитация отправки
-      console.log('Заявка:', phoneInput.value);
 
-      // Очистка полей
-      form.reset();
-
-      // Уведомление
-      alert('✅ Заявка на тест-драйв отправлена! Менеджер свяжется в течение 5 минут.');
-
-      // Закрытие модала
-      closeModal();
-    } else {
+    if (!validatePhone(phoneInput.value)) {
       phoneInput.style.borderColor = '#ee685f';
-      setTimeout(() => { phoneInput.style.borderColor = ''; }, 2000);
       phoneInput.focus();
+      setTimeout(() => {
+        phoneInput.style.borderColor = '';
+      }, 2000);
+      return;
     }
+
+    console.log('Заявка:', phoneInput.value);
+    form.reset();
+    alert('✅ Заявка на тест-драйв отправлена! Менеджер свяжется в течение 5 минут.');
+    closeModal();
   });
 
-  // Маска телефона
-  const phoneInput = document.querySelector('#modal-user-phone');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-  // События
+    if (!validatePhone(phoneInput.value)) {
+      phoneInput.style.borderColor = '#ee685f';
+      phoneInput.focus();
+      setTimeout(() => {
+        phoneInput.style.borderColor = '';
+      }, 2000);
+      return;
+    }
+
+    console.log('Заявка:', phoneInput.value);
+    alert('✅ Заявка на тест-драйв отправлена! Менеджер свяжется в течение 5 минут.');
+    form.reset();
+    closeModal();
+  });
+
+  phoneInput.addEventListener('focus', onPhoneFocus);
   phoneInput.addEventListener('input', formatPhone);
   phoneInput.addEventListener('keydown', handlePhoneKeys);
-  phoneInput.addEventListener('focus', onPhoneFocus);
-  phoneInput.addEventListener('click', fixCursorPosition); // ✅ Фикс клика
-
-  let cursorPos = 0; // Глобальная позиция курсора
-
-  function formatPhone(e) {
-    const input = e.target;
-    cursorPos = input.selectionStart; // Сохраняем позицию ДО форматирования
-
-    let value = input.value.replace(/\D/g, '');
-    let formatted = '';
-
-    if (value.length >= 1) formatted += '+7(';
-    if (value.length > 1) formatted += value.slice(1, 4);
-    if (value.length > 4) formatted += ')' + value.slice(4, 7);
-    if (value.length > 7) formatted += '-' + value.slice(7, 9);
-    if (value.length > 9) formatted += '-' + value.slice(9, 11);
-
-    input.value = formatted;
-
-    // ✅ Восстанавливаем позицию курсора ПОСЛЕ форматирования
-    setCursorPosition(input, getCursorPosition(cursorPos, formatted.length));
-  }
-
-  function fixCursorPosition(e) {
-    // ✅ При клике курсор идёт в конец доступной позиции
-    const input = e.target;
-    setTimeout(() => {
-      const value = input.value;
-      let pos = input.selectionStart;
-
-      // Перемещаем курсор в первую доступную позицию после скобок/тире
-      if (value.includes('+7(') && pos < 4) pos = 4;
-      else if (value.includes(')') && pos < 7) pos = 7;
-      else if (value.includes('-') && pos === 8) pos = 10;
-
-      setCursorPosition(input, pos);
-    }, 10);
-  }
-
-  function getCursorPosition(oldPos, newLength) {
-    // Логика позиций маски: +7( | 777 ) 777 - 77 - 77
-    const maskPositions = [4, 7, 10, 13]; // После +7(, ), первого -, второго -
-
-    for (let i = 0; i < maskPositions.length; i++) {
-      if (oldPos <= maskPositions[i]) return maskPositions[i];
-    }
-    return Math.min(newLength, 17);
-  }
-
-  function setCursorPosition(input, pos) {
-    input.setSelectionRange(pos, pos);
-    input.focus();
-  }
-
-  function handlePhoneKeys(e) {
-    if ([8, 9, 37, 38, 39, 46].indexOf(e.keyCode) > -1) return;
-    const value = e.target.value.replace(/\D/g, '');
-    if (value.length + 1 > 11) e.preventDefault();
-  }
-
-  function onPhoneFocus(e) {
-    if (e.target.value === '') {
-      e.target.value = '+7(';
-      setCursorPosition(e.target, 4);
-    }
-  }
-
-  function validatePhone(value) {
-    return /^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$/.test(value);
-  }
+  phoneInput.addEventListener('click', fixCursorPosition);
 
   function openModal() {
     modal.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
-
-    trapFocus(modal);
+    phoneInput.focus();
   }
 
   function closeModal() {
@@ -148,13 +91,51 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => {
       modal.classList.remove('active', 'closing');
       document.body.style.overflow = '';
-      form.reset(); // ✅ Очистка формы при любом закрытии
-      const lastActive = document.querySelector('.hero-promo-button, .product-card-button');
-      lastActive?.focus();
+      form.reset();
+      phoneInput.style.borderColor = '';
+      if (lastActiveElement) lastActiveElement.focus();
     }, 200);
   }
 
+  function onPhoneFocus(e) {
+    if (e.target.value === '') {
+      e.target.value = '+7(';
+      e.target.setSelectionRange(4, 4);
+    }
+  }
 
+  function formatPhone(e) {
+    const input = e.target;
+    let digits = input.value.replace(/\D/g, '').slice(0, 11);
 
+    if (digits.startsWith('8')) digits = '7' + digits.slice(1);
+    if (!digits.startsWith('7')) digits = '7' + digits;
 
+    let value = '+7(';
+    if (digits.length > 1) value += digits.slice(1, 4);
+    if (digits.length > 4) value += ')' + digits.slice(4, 7);
+    if (digits.length > 7) value += '-' + digits.slice(7, 9);
+    if (digits.length > 9) value += '-' + digits.slice(9, 11);
+
+    input.value = value;
+  }
+
+  function handlePhoneKeys(e) {
+    if ([8, 9, 37, 38, 39, 46].includes(e.keyCode)) return;
+
+    const value = e.target.value.replace(/\D/g, '');
+    if (value.length >= 11) e.preventDefault();
+  }
+
+  function fixCursorPosition() {
+    setTimeout(() => {
+      if (phoneInput.value === '+7(') {
+        phoneInput.setSelectionRange(4, 4);
+      }
+    }, 0);
+  }
+
+  function validatePhone(value) {
+    return /^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$/.test(value);
+  }
 });
