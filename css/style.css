@@ -26,7 +26,6 @@ body {
 
 .header-top {
   margin: 0;
-
   margin-top: -0.375rem;
   margin-left: 0.375rem;
   display: flex;
@@ -188,9 +187,9 @@ body {
 .header-phone-button {
   display: none;
 }
-.no-webp .header-image {
+/* .no-webp .header-image {
   background-image: url("../img/header-back-scooter.png");
-}
+} */
 
 .section-back-image {
   background-image: url("../img/header-back-scooter.webp");
@@ -203,7 +202,9 @@ body {
   margin: auto;
   margin-top: 2.625rem;
   border-radius: 10px;
+  overflow: hidden;
 }
+
 .container-wide {
   max-width: 86.25rem;
   margin: auto;
@@ -1124,6 +1125,19 @@ body {
   .hero-promo {
     margin-left: 5.5rem;
   }
+  .section-back-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: inherit;
+    z-index: 1;
+  }
+
+  .section-back-image > * {
+    position: relative;
+    z-index: 2;
+  }
   .advantages-choice-wrapper {
     margin-left: 5.5rem;
   }
@@ -1197,6 +1211,9 @@ body {
   .header-content {
     margin-left: -1.5625rem;
   }
+  .header-burger-line:last-child {
+    margin-left: 3px;
+  }
   .hero-promo {
     margin-left: 4rem;
   }
@@ -1264,6 +1281,7 @@ body {
     flex: 0 0 auto;
     margin-left: 12px;
   }
+
   .header-button-text-cat {
     display: none;
   }
@@ -1307,6 +1325,7 @@ body {
   .section-back-image {
     min-height: 28.8125rem;
   }
+
   .advantages-choice {
     margin-top: 0.5rem;
     flex-direction: column;
