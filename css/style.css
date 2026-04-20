@@ -878,6 +878,8 @@ body {
   right: 30px;
   width: 20px;
   height: 20px;
+  border: 0;
+  background-color: inherit;
 }
 .modal-description-wrapper {
   display: flex;
@@ -920,6 +922,9 @@ body {
 }
 .modal-notify-wrapper {
   max-width: 14.25rem;
+}
+.notify-label {
+  margin-top: 10px;
 }
 .notify-input-modal {
   appearance: none;
@@ -1349,6 +1354,9 @@ body {
     font-size: 1.25rem;
     margin-top: 2.25rem;
   }
+  .product-cards-wrapper {
+    margin-bottom: 2rem;
+  }
   .product-card {
     flex: 0 0 70%;
     margin-bottom: 1.5rem;
@@ -1382,6 +1390,9 @@ body {
     justify-content: center;
     flex-direction: column;
     max-width: 29rem;
+  }
+  .cta-form-title {
+    padding-top: 0.5rem;
   }
   .input-group-wrapper {
     display: flex;
@@ -1453,9 +1464,53 @@ body {
     order: 3;
     margin-left: 1rem;
   }
+  #feedback-modal {
+    width: 23.375rem;
+  }
+  .modal-img {
+    display: none;
+  }
 }
 @media (max-width: 400px) {
   .section-back-image {
     min-height: 33.8rem;
+  }
+  .header-button-text-menu {
+    display: none;
+  }
+}
+@media (max-width: 321px) {
+  .header-cart {
+    display: none;
+  }
+  .hero-promo {
+    margin-left: 1rem;
+  }
+  .notify-label {
+    padding-bottom: 0;
+  }
+  .cta-580 {
+    margin-left: 10px;
+  }
+  .cta-input,
+  .form-button {
+    min-width: 93%;
+  }
+  .subscribe-wrapper {
+    margin-left: 2rem;
+  }
+
+  .subscribe-input {
+    max-width: 80%;
+  }
+  .footer-site-map {
+    margin-left: 20px;
+  }
+  .footer-contacts {
+    margin-left: 0rem;
+  }
+  .footer-media-wrapper {
+    margin-left: 0;
+    gap: 5px;
   }
 }

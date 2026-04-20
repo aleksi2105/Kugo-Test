@@ -679,6 +679,7 @@
             <input
               type="email"
               class="subscribe-input"
+              id="subscribe-input"
               placeholder="Введите Ваш email"
               required
             />
@@ -894,8 +895,8 @@
       </div>
     </footer>
     <div class="modal" id="feedback-modal">
-      <a
-        href="#"
+      <button
+        type="button"
         class="modal-close"
         data-toggle="modal"
         data-target="#feedback-modal"
@@ -904,7 +905,7 @@
         <svg class="close-icon" width="24" height="24">
           <use href="./img/sprite.svg#close"></use>
         </svg>
-      </a>
+      </button>
       <div class="modal-dialog">
         <div class="modal-description-wrapper">
           <h2 class="modal-title">Запишитесь на тест-драйв электросамоката</h2>
@@ -947,7 +948,7 @@
         </div>
         <picture>
           <source type="image/webp" srcset="./img/Girl-on-scooter.webp" />
-          <source type="image/jpeg" srcset="./img/Girl-on-scooter.png" />
+          <source type="image/png" srcset="./img/Girl-on-scooter.png" />
           <img
             src="./img/Girl-on-scooter.png"
             alt="Девушка на самокате"
