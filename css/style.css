@@ -1514,3 +1514,11 @@ body {
     gap: 5px;
   }
 }
+@media (max-width: 850px) and (max-height: 550px) {
+  .product-card {
+    display: flex;
+    flex: 0 0 100%;
+    max-width: none;
+    flex-direction: row;
+  }
+}
