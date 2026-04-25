@@ -375,9 +375,13 @@ body {
   border-radius: 10px;
   overflow: hidden;
 }
-.product-card:hover {
-  border: 1.5px solid #6f73ee;
+
+@media all and (min-width: 991px) {
+  .product-card:hover {
+    border: 1.5px solid #6f73ee;
+  }
 }
+
 .product-card-title {
   margin-top: 0;
   font-weight: 600;
