@@ -991,18 +991,20 @@
           </p>
           <form action="send.php" class="modal-form">
             <h3 class="modal-input-title">Как с вами удобнее связаться?</h3>
-            <input
-              type="tel"
-              class="input"
-              name="phone"
-              id="modal-user-phone"
-              placeholder="+7 (_ _ _) _ _ - _ _ - _ _"
-              maxlength="30"
-              required
-            />
-            <button class="button modal-form-button" type="submit">
-              Оформить предзаказ
-            </button>
+            <div class="modal-input-wrapper">
+              <input
+                type="tel"
+                class="input"
+                name="phone"
+                id="modal-user-phone"
+                placeholder="+7 (_ _ _) _ _ - _ _ - _ _"
+                maxlength="30"
+                required
+              />
+              <button class="button modal-form-button" type="submit">
+                Оформить предзаказ
+              </button>
+            </div>
             <div class="modal-notify-wrapper">
               <label for="notify-modal" class="notify-label">
                 <input

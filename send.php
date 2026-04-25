@@ -1,11 +1,11 @@
 <?php
-// Разрешаем только POST-запросы
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
     exit('Method Not Allowed');
 }
  
-// Получаем и очищаем телефон
+
 $phone = isset($_POST['phone']) ? trim(htmlspecialchars($_POST['phone'])) : '';
  
 if (empty($phone)) {
@@ -24,7 +24,6 @@ $headers = implode("\r\n", [
     'X-Mailer: PHP/' . phpversion(),
 ]);
  
-// base64 для тела — гарантирует корректную кириллицу
 $message = base64_encode($message);
  
 if (mail($to, $subject, $message, $headers)) {

@@ -1,23 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── Общие утилиты ─────────────────────────────────────────────────────────
-
   function validatePhone(value) {
     return /^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$/.test(value);
   }
 
-  function setInputError(input, hasError) {
+  function setInputError(input, hasError, message = 'Введите номер в формате +7(XXX)XXX-XX-XX') {
     input.classList.toggle('input--error', hasError);
     input.setAttribute('aria-invalid', hasError ? 'true' : 'false');
+
+    input.parentElement?.querySelector('.input-error-hint')?.remove();
+
     if (hasError) {
-      const timer = setTimeout(() => setInputError(input, false), 2000);
+      const hint = document.createElement('span');
+      hint.className = 'input-error-hint';
+      hint.setAttribute('role', 'alert');
+      hint.setAttribute('aria-live', 'assertive');
+      hint.textContent = message;
+      input.insertAdjacentElement('afterend', hint);
+
+      const timer = setTimeout(() => setInputError(input, false), 3000);
       input.dataset.errorTimer = timer;
     } else {
       clearTimeout(Number(input.dataset.errorTimer));
     }
   }
 
-  // ── Маска телефона ────────────────────────────────────────────────────────
+  // ── Маска телефона 
 
   function applyPhoneMask(input) {
     input.addEventListener('focus', () => {
@@ -54,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── Мини-модал «Отправлено» ───────────────────────────────────────────────
+  // ── Мини-модал «Отправлено» 
 
   function showSuccessMessage() {
     document.querySelector('.success-modal')?.remove();
@@ -110,8 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => el.remove(), 4000);
   }
 
-  // ── Отправка на send.php ──────────────────────────────────────────────────
-
   async function sendForm({ phone, submitBtn, form, originalText, onSuccess }) {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Отправка…';
@@ -139,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ── Инициализация любой формы ─────────────────────────────────────────────
+  // ── Инициализация формы 
 
   function initForm(form, { onSuccess } = {}) {
     if (!form) return;
@@ -162,10 +168,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── CTA-форма на странице ─────────────────────────────────────────────────
   initForm(document.querySelector('.cta-form'));
 
-  // ── Модальное окно ────────────────────────────────────────────────────────
+  // ── Модальное окно 
 
   const modal = document.querySelector('#feedback-modal');
   const closeButton = document.querySelector('.modal-close');
@@ -204,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 200);
   }
 
-  // Модальная форма закрывает окно после успешной отправки
   initForm(modalForm, { onSuccess: closeModal });
 
   const openButtons = document.querySelectorAll(
