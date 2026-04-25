@@ -1060,7 +1060,6 @@ body {
   opacity: 1;
 }
 
-/* Иконка галочки */
 .success-modal__icon {
   width: 56px;
   height: 56px;
@@ -1072,7 +1071,6 @@ body {
   margin: 0 auto 16px;
 }
 
-/* Заголовок "Отправлено" */
 .success-modal__title {
   font-size: 20px;
   font-weight: 700;
@@ -1081,7 +1079,6 @@ body {
   letter-spacing: -0.02em;
 }
 
-/* Подпись */
 .success-modal__text {
   font-size: 14px;
   color: #6b7280;
@@ -1089,7 +1086,6 @@ body {
   margin: 0 0 24px;
 }
 
-/* Кнопка закрытия */
 .success-modal__close {
   display: inline-block;
   padding: 10px 28px;
